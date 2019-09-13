@@ -5,10 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Multiplication Table</title>
+
+    <style>
+    #outputTable{
+        height: 350 px;
+        width: 350px;
+        background-color: grey;
+    }
+    #genButton{
+        color: blue;
+    }
+    </style>
 </head>
 <body>
         <div id="tableBox">
-                <input type="button" onclick="tablePrompt()" value="Generate Table">
+                <input type="button" id="genButton" onclick="tablePrompt()" value="Generate Table">
                 <h3 id="outputTable"></h3>
             </div>
 <script>
