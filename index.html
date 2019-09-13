@@ -3,10 +3,20 @@
 <head>
 <meta charset=utf-8 />
 <title>Calculator</title> 
+<style>
+#box{
+    height: 200px;
+    width: 250px;
+    background-color: rgb(255, 187, 0);
+    margin: 0 auto;  
+}
+
+</style>
 </head>
 <body>
 
-<p>
+    <div id="box">
+    <p>
 1st Number : <input type="text" id="firstNumber" /><br>
 2nd Number: <input type="text" id="secondNumber" /><br>
 <input type="button" onClick="multiplyBy()" Value="Multiply" />
@@ -14,7 +24,7 @@
 </p>
 <p>The Result is : <br>
 <p id = "result"></p>
-
+</div>
 <script>
 function multiplyBy()
 {
