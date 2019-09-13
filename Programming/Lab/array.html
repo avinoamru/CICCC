@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Array</title>
+</head>
+<body>
+    <h2>Sort the fruits</h2>
+    <button onclick="fSort()">Sort</button>
+    <button onclick="fReverse()">Reverse</button>
+    <p id="fruitsSort"></p>
+    
+
+    <script>
+     var fruits = ["Durian ","FIgs ","Blackberries ","Elderberries ","Apricots ","Cherry ","Grapefruit"];
+     document.getElementById("fruitsSort").innerHTML = fruits;
+
+     function fSort(){
+         fruits.sort();
+         document.getElementById("fruitsSort").innerHTML = fruits;
+     }
+     function fReverse(){
+      fruits.reverse();
+      document.getElementById("fruitsSort").innerHTML = fruits;
+
+     }
+
+
+    </script>
+</body>
+</html>

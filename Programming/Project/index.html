@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>calculator</title>
+    <style>
+        #output{
+            height: 300px;
+            width: 300px;
+            background-color: rgb(190, 190, 190);
+            font-size: 3em;
+            margin: 0 auto;
+        }
+        #result{
+            color: rgb(38, 107, 255);
+            font-size: 2em;
+            margin: 0 auto;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div id="output">
+    <input id="firstNum" type="number" placeholder="Enter 1st number"><br>
+    <input id="secondNum" type="number" placeholder="Enter 2nd number"><br>
+    <input type="button" id="multiply" onclick="multiply()" value="Multiply" ></button>
+    <input type="button" id="divide" onclick="divide()" value="Divide"></button> <br>
+    <p id="result"></p>
+    </div>
+    <script>
+        var firstNum; 
+        var secondNum;
+
+    function multiply() {
+        firstNum = document.getElementById("firstNum").value;
+        secondNum = document.getElementById("secondNum").value;
+        document.getElementById("result").innerHTML = firstNum * secondNum; 
+
+    }
+    function divide() {
+        firstNum = document.getElementById("firstNum").value;
+        secondNum = document.getElementById("secondNum").value;
+        document.getElementById("result").innerHTML = firstNum / secondNum; 
+    }
+    </script>
+</body>
+</html>

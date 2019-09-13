@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    #output{
+        font-size: 5em;
+        color: royalblue;
+        text-align: center;
+        
+            }
+    </style>
+</head>
+<body>
+    <div id = "output"></div>
+    <script>
+        var temp = parseInt(prompt("What is the temperature?"));
+        var tempSymbol = prompt("what is the temperature symbol, F/C?");
+        var checkFlag = true;
+        var answer;
+        tempSymbol = tempSymbol.toUpperCase();
+        switch(tempSymbol){
+            case 'C':
+                answer = (temp * 5/9) - 32;
+                break;
+            case 'F':
+                answer = (temp * 9/5) + 32;
+                break;
+            default: 
+                checkFlag = false;
+                break;
+            
+        }
+
+        answer = answer.toFixed(2);
+
+        if(checkFlag)
+        document.getElementById("output").innerHTML = " The temperature is: " + answer + " and the inputed symbol was " + tempSymbol;
+        else
+        document.getElementById("output").innerHTML = "Try F or C!"
+    
+    </script>
+</body>
+</html>

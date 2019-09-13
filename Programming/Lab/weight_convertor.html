@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>weight Converter</title>
+
+ 
+</head>
+<body>
+    
+        <p>Kilograms</p>
+        <input id="Kilo" type="number" placeholder="Enter Number" oninput="weightConverterKg(this.value)" onchange="weightConverterKg(this.value)"/>
+
+        <p>Pounds</p>
+        <input id="Pounds" type="number" placeholder="Enter Number" oninput="weightConverterPd(this.value)" onchange="weightConverterPd(this.value)"/>
+
+    <p id="output1">Pounds: 0</p>
+    <p id="output2">Kgs: 0</p>
+
+<script>
+  function weightConverterKg(valNum) {
+    document.getElementById("output1").innerHTML= "Pounds: " + valNum*2.2046;
+    
+    }
+  function weightConverterPd(valNum) {
+    document.getElementById("output2").innerHTML= "Kgs: " +valNum/2.2046;
+    
+    }
+    
+</script>
+</body>
+</html>
