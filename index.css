@@ -3,25 +3,32 @@
     font-size: 4em;   
 }
 
-#array{
-
-}
-
 #calculator{
+color: blue;
+font-size: 1em;
+}
+
+#array{
+color: red;
+font-size: 1em;
 
 }
+
 
 #factorial{
-
+color: green;
+font-size: 1em;
 }
 
 #multiplytable{
-
+color: purple;
+font-size: 1em;
 }
 
 #weightconv{
-
+color: teal;
+font-size: 1em;
 }
-
-.button{
-    align-self: center;
+.button {
+    display: block;
+  }
