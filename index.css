@@ -4,7 +4,7 @@
 }
 
 #array{
-margin: 100px;
+
 }
 
 #calculator{
@@ -22,3 +22,6 @@ margin: 100px;
 #weightconv{
 
 }
+
+.button{
+    align-self: center;
