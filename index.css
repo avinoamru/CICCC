@@ -32,16 +32,16 @@ font-size: 1em;
 .btn {
     
     display: inline-block;
-    padding: 15px 30px;
-    font-size: 24px;
+    padding: 10px 20;
+    font-size: 20px;
     cursor: pointer;
     text-align: center;
     text-decoration: none;
     outline: none;
     color: #fff;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(187, 187, 187);
     border: none;
-    border-radius: 15px;
+    border-radius: 7px;
     box-shadow: 0 9px #999;
   }
   
