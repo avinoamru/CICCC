@@ -29,6 +29,27 @@ font-size: 1em;
 color: teal;
 font-size: 1em;
 }
-.button {
-    display: block;
+.btn {
+    
+    display: inline-block;
+    padding: 25px 50px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: rgb(228, 228, 228);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+  }
+  
+  .button:hover {background-color: #aaaaaa}
+  
+  .button:active {
+    background-color: #868686;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
   }
