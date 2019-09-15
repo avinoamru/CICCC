@@ -29,27 +29,8 @@ font-size: 1em;
 color: teal;
 font-size: 1em;
 }
-.btn {
-    
-    display: inline-block;
-    padding: 10px 20;
-    font-size: 20px;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    outline: none;
-    color: #fff;
-    background-color: rgb(187, 187, 187);
-    border: none;
-    border-radius: 7px;
-    box-shadow: 0 9px #999;
-  }
-  
-  .button:hover {background-color: #aaaaaa}
-  
-  .button:active {
-    background-color: #868686;
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
-  }
-  }
+
+.btn{
+    background-color: black;
+    font-size: 24px;
+}
