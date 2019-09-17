@@ -1,6 +1,11 @@
-#title{
+.header{
+    background: rgb(1, 167, 1);
+    margin: 0;
+    font-size: 30px;
+    
     text-align: center;
-    font-size: 4em;   
+    color: white;
+    padding: 100px;
 }
 
 #calculator{

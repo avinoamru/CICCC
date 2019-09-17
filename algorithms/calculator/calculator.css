@@ -1,0 +1,11 @@
+.input {
+    font-size: 1em;
+}
+
+.buttons{
+    text-align: center;
+    border: 2px;
+    color: white;
+    font-size: 25px;
+    background-color: green;
+}

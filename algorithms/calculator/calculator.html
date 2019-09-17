@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator</title>
+    <script src="calculator.js"></script>
+    <link rel = "stylesheet"
+    type = "text/css"
+    href = "calculator.css"/>
+</head>
+<body>
+    <h1 id="Title">JS calculator</h1>
+   
+    <p>
+        First Number:<input type="number" class="input" id="firstNum" placeholder="First Number"/><br>
+        Second Number:<input type="number" class="input" id="secondNum" placeholder="Second Number"/><br>
+    </p>
+    <input type="button" class="buttons" value="+" onclick="plus()"/>
+    <input type="button" class="buttons" value="-" onclick="minus()"/>
+    <input type="button" class="buttons" value="x" onclick="multiply()"/>
+    <input type="button" class="buttons" value="/" onclick="divide()"/>
+    
+    <h2 id="result"></h2>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="output"></h1>
+    <script>
+    var name = prompt("What is your name");
+    var java = parseInt(prompt("What is your java exam score?"));
+    var intro =parseInt(prompt("What is your intro exam score?"));
+    var algo = parseInt(prompt("What is your algorithms exam score?"));
+    // instead of var total I could've write: var avg = (java + intro + algo) / 3 .
+    var total = java + intro + algo;
+    var avg = (total / 3);
+// if(typeof(avg) != typeof(parseFloat)){
+    if (avg >= 70){
+        document.getElementById("output").innerHTML = "Great job " + name + " you have passed the course with an average of: " + avg.toFixed(2);
+    }
+    else {
+        document.getElementById("output").innerHTML = "I'm sorry " + name + " you have failed the course because you got an average of: " + avg.toFixed(2);
+    }
+        
+
+    
+    
+    </script>
+</body>
+</html>
