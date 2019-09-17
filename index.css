@@ -37,6 +37,7 @@ color: teal;
     font-size: 24px;
     font-family: Arial;
     background-color: rgb(63, 168, 230);
+    display: block;
 
 }
 #prList{
