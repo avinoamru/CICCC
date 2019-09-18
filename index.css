@@ -1,53 +1,33 @@
+body{
+    background-color: antiquewhite;
+}
+
+
 .header{
-    background: rgb(28, 168, 28);
+    background: rgb(211, 181, 126);
     margin: 0;
     font-size: 30px;
     
     text-align: center;
     color: white;
-    padding: 100px;
-}
-
-#calculator{
-color: blue;
-}
-
-#array{
-color: red;
-}
-
-
-#factorial{
-color: green;
-}
-
-#multiplytable{
-color: purple;
-}
-
-#weightconv{
-color: teal;
+    padding: 10px;
 }
 
 .btn{
-    color: white;
-    border: 5px;
-    border-color: black;
-    padding: 3px;
-    font-size: 24px;
-    font-family: Arial;
-    background-color: rgb(63, 168, 230);
-    display: block;
+    
+    padding: 10px 25px;
+    width: auto;
+    height:auto;
+    display:inline-block;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 187, 123);
+    border: 10px;
+   border-radius: 20px;
+    box-shadow: 0 5px #999;
 
-}
-#prList{
-    font-size: 1em;
-}
-
-#myProjects{
-    font-size: 2em;
-}
-
-#calculatorV2{
-    color: black;
-}
+    
+  }

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="output"></h2>
+
+    <script>
+        /*============================
+                    Input
+        ============================*/
+    var name = prompt("What is your name?");    
+    var firstNum = parseInt(prompt("Tell me the first number"));
+    var secondNum = parseInt(prompt("Tell me the second number"));
+    var symbol = prompt("Tell me the symbol out of * for multiplication, / for devision, + for addition, - for subtraction");   
+    
+    /*============================
+            condition/process/output
+    ============================*/
+
+    switch (symbol){
+        case '*':
+            document.getElementById("output").innerHTML = "Hi, " + name + ", the answer for multiplication of " 
+            + firstNum + " and " + secondNum + " is " + parseFloat((firstNum * secondNum).toFixed(2));
+            break;
+
+            case '/':
+            document.getElementById("output").innerHTML = "Hi, " + name + ", the answer for division of " 
+            + firstNum + " and " + secondNum + " is " + parseFloat((firstNum / secondNum).toFixed(2));
+            break;
+
+            case '+':
+            document.getElementById("output").innerHTML = "Hi, " + name + ", the answer for addition of " 
+            + firstNum + " and " + secondNum + " is " + parseFloat((firstNum + secondNum).toFixed(2));
+            break;
+
+            case '-':
+            document.getElementById("output").innerHTML = "Hi, " + name + ", the answer for subtraction of " 
+            + firstNum + " and " + secondNum + " is " + parseFloat((firstNum - secondNum).toFixed(2));
+            break;
+    
+    
+    
+    
+    
+    
+    
+    
+    
+        }    
+
+
+
+    </script>
+</body>
+</html>

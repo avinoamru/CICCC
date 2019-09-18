@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    #output{
+        background-color: red;
+        background-blend-mode: color-dodge;
+        text-align: center;
+        text-underline-position: auto;
+    }
+    
+    </style>
+</head>
+<body>
+    <h1 id="output"></h1>
+    <script>
+    var number1 = parseInt(prompt("Tell me the first number"))    
+    var number2 = parseInt(prompt("Tell me the second number"))
+    var number3 = parseInt(prompt("Tell me the third number"))
+    
+    var max = Math.max(number1, number2, number3);
+
+        document.getElementById("output").innerHTML = "The biggest number among: " + number1 + ", " + number2 + ", " + number3 + " is  " + max;
+    
+    
+    </script>
+</body>
+</html>
