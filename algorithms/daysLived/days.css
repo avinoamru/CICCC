@@ -1,4 +1,3 @@
-#output{
-    color: antiquewhite;
-    font-family: Arial;
+.output{
+    font-size: 5em;
 }
