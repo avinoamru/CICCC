@@ -6,7 +6,7 @@ var inputName = prompt("What is your name?");
 var inputDay = parseInt(prompt("What day did you born on?"));
 var inputMonth = parseInt(prompt("What month is your birthday on?"));
 var inputYear = parseInt(prompt("What year did you born on?"));
-
+//alert(inputYear + "  " + inputMonth + "  " + inputDay);
 /*======================================
         Getting the current date
 ======================================*/
@@ -14,23 +14,29 @@ var today = new Date();
 var todayDay = today.getDate();
 var currentMonth = today.getMonth() + 1;
 var currentYear = today.getFullYear();
+//alert(currentYear + "  " + currentMonth + "  " + todayDay);
+var calcAnswer;
 
 /*======================================
          Check for Leap year
 ======================================*/
          
-         function isItLeapYear(input){
-             if ((input % 400) === 0){
-                 return true;
-                }
-                else if ((input % 100) === 0){
-                    return false;
-                }
-                else if ((input % 4) === 0){
-                    return true;
-                }
-                else return false;
-            }
+function IsItLeapYear(input){
+    
+    if ((input % 400) == 0){
+        return true;
+    }
+    else if ((input % 100) == 0){
+        return false;
+    }
+    else if ((input % 4) == 0){
+        return true;
+    }
+    else return false;
+console.log("is it leap year t/f?" + IsItLeapYear);
+}
+
+
 
 /*======================================
 Number of Days in each month
@@ -89,14 +95,17 @@ function NumDaysBetweenMonths(month1, month2){
             case 12:
                 localOuput += 31;
                 break;
+            }
         }
-    }
+        // alert (localOuput);
+        console.log("running month: " +i+". months so far: " + localOuput +", reverse :" + reverse);
         if(reverse){
             return -localOuput;
         }
         else{
             return localOuput;
         }
+
 }
 
 /*======================================
@@ -106,12 +115,14 @@ function CalculateYearToDays (year1, year2){
     var localOutput = 0;
     
     for (i = year1; i < year2; i++){
-        if (isItLeapYear(i)){
+        console.log("is it a leap year? " + i +"  "+ localOutput);
+        if (IsItLeapYear(i)){
             localOutput += 366;
-        }
+    ``  }
         else{
             localOutput += 365;
         }
+        console.log("running year: "+i+". Dyas so far: " + localOutput);
     }
     
     return localOutput;
@@ -121,10 +132,19 @@ function CalculateYearToDays (year1, year2){
     ============================================*/
       function CalculateDaysDiff(day1, day2){
           
-          var localOutput = day1 - day2;
-          
-          return localOutput;
-        }
-        
+          var localOutput = day2 - day1;
 
- document.getElementById("output").innerHTML = "Hi " + inputName + " You born in: " + inputDay + "/" + inputMonth + "/" + inputYear + " which was " +  CalculateYearToDays(inputYear, currentYear) + NumDaysBetweenMonths(inputMonth, currentMonth) + CalculateDaysDiff(inputDay, todayDay) + " days ago.";
+          console.log("running days: " + localOutput);
+          return localOutput;
+      }
+   /*=============================================
+                      Output 
+   ==============================================*/
+   if (IsItLeapYear()){
+       calcAnswer = (CalculateYearToDays(inputYear, currentYear) + NumDaysBetweenMonths(inputMonth, currentMonth) + CalculateDaysDiff(inputDay, todayDay) - 1);
+       
+    } else{
+        calcAnswer = (CalculateYearToDays(inputYear, currentYear) + NumDaysBetweenMonths(inputMonth, currentMonth) + CalculateDaysDiff(inputDay, todayDay));
+    }
+    
+document.getElementById("output").innerHTML = "Hi " + inputName + " You born in: " + inputDay + "/" + inputMonth + "/" + inputYear + " which was " + calcAnswer + " days ago.";
