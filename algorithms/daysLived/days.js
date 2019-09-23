@@ -1,6 +1,6 @@
-/* /*======================================
+/*=========================================
             Input/Birth date        
-======================================*/
+=========================================*/
 
 var inputName = prompt("What is your name?");
 var inputDay = parseInt(prompt("What day did you born on?"));
@@ -23,6 +23,7 @@ var calcAnswer;
          
 function IsItLeapYear(input){
     
+    // console.log("is it leap year t/f?" + IsItLeapYear());
     if ((input % 400) == 0){
         return true;
     }
@@ -33,8 +34,8 @@ function IsItLeapYear(input){
         return true;
     }
     else return false;
-console.log("is it leap year t/f?" + IsItLeapYear);
 }
+var checkLeap = IsItLeapYear();
 
 
 
@@ -63,11 +64,7 @@ function NumDaysBetweenMonths(month1, month2){
                 localOuput += 31;
                 break;
             case 2:
-                if (IsItLeapYear(inputYear)){
-                    localOuput += 29;
-                }else{
                 localOuput += 28;
-                }
                 break;
             case 3:
                 localOuput += 31;
@@ -121,7 +118,7 @@ function NumDaysBetweenMonths(month1, month2){
     for (i = year1; i < year2; i++){
         if (IsItLeapYear(i)){
             localOutput += 366;
-        }else if (inputYear = IsItLeapYear(inputYear)){
+        }else if (inputYear = checkLeap){
             localOutput += 365;
         }
         else{
@@ -147,4 +144,3 @@ function NumDaysBetweenMonths(month1, month2){
     calcAnswer =CalculateYearToDays(inputYear, currentYear) +  NumDaysBetweenMonths(inputMonth, currentMonth) + CalculateDaysDiff(inputDay, todayDay);
     
 document.getElementById("output").innerHTML = "Hi " + inputName + " You born in: " + inputDay + "/" + inputMonth + "/" + inputYear + " which was " + calcAnswer + " days ago.";
-//  
