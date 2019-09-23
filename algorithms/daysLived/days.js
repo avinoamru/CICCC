@@ -1,4 +1,4 @@
-/*======================================
+/* /*======================================
             Input/Birth date        
 ======================================*/
 
@@ -63,7 +63,11 @@ function NumDaysBetweenMonths(month1, month2){
                 localOuput += 31;
                 break;
             case 2:
+                if (IsItLeapYear(inputYear)){
+                    localOuput += 29;
+                }else{
                 localOuput += 28;
+                }
                 break;
             case 3:
                 localOuput += 31;
@@ -111,18 +115,18 @@ function NumDaysBetweenMonths(month1, month2){
 /*======================================
        Number of days in year/leap year
 ======================================*/
-function CalculateYearToDays (year1, year2){
+ function CalculateYearToDays (year1, year2){
     var localOutput = 0;
-    
+     
     for (i = year1; i < year2; i++){
-        console.log("is it a leap year? " + i +"  "+ localOutput);
         if (IsItLeapYear(i)){
             localOutput += 366;
-    ``  }
-        else{
+        }else if (inputYear = IsItLeapYear(inputYear)){
             localOutput += 365;
         }
-        console.log("running year: "+i+". Dyas so far: " + localOutput);
+        else{
+        localOutput += 365;
+        }
     }
     
     return localOutput;
@@ -140,11 +144,7 @@ function CalculateYearToDays (year1, year2){
    /*=============================================
                       Output 
    ==============================================*/
-   if (IsItLeapYear()){
-       calcAnswer = (CalculateYearToDays(inputYear, currentYear) + NumDaysBetweenMonths(inputMonth, currentMonth) + CalculateDaysDiff(inputDay, todayDay) - 1);
-       
-    } else{
-        calcAnswer = (CalculateYearToDays(inputYear, currentYear) + NumDaysBetweenMonths(inputMonth, currentMonth) + CalculateDaysDiff(inputDay, todayDay));
-    }
+    calcAnswer =CalculateYearToDays(inputYear, currentYear) +  NumDaysBetweenMonths(inputMonth, currentMonth) + CalculateDaysDiff(inputDay, todayDay);
     
 document.getElementById("output").innerHTML = "Hi " + inputName + " You born in: " + inputDay + "/" + inputMonth + "/" + inputYear + " which was " + calcAnswer + " days ago.";
+//  
