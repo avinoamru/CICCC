@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<h1 id="output"></h1>
+
+    <script>
+        var displayArray = [10,9,4,5,16,7,33,1];
+     var iArray = [10,9,4,5,16,7,33,1];
+     
+
+     function selectionSortAviMode(input){
+        var outputArray = input;
+        for (var i = 0; i < (outputArray.length - 1); i++){
+            var lowestPosition = checkMinArrayElement(outputArray,i);
+            swapElementAviMode(outputArray, lowestPosition, i);
+        }
+        return outputArray;
+        
+     }
+
+
+     function checkMinArrayElement(inputArray,index){
+         var lowest = Infinity;
+         var lowestIndex;
+         for (var j=index ; j<inputArray.length ; j++){
+            if(inputArray[j]<lowest){
+                lowest = inputArray[j];
+                lowestIndex=j;
+                console.log("this showes lowest: "+lowest);
+            }
+         }
+         console.log("lowestIndex = "+lowestIndex);
+         return lowestIndex;
+     }
+
+     function swapElementAviMode(input, lowestP,targetP){
+         var temp = input[lowestP];
+         input[lowestP] = input[targetP];
+         input[targetP] = temp;
+         console.log("this should show the temp "+temp);
+     }
+
+     var outputArrayAvi = selectionSortAviMode(iArray);
+
+     console.log(iArray);
+     console.log(outputArrayAvi);
+
+    </script>
+</body>
+</html>

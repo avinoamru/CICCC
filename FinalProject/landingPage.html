@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Mansalva|Turret+Road&display=swap" rel="stylesheet">
+    <title>Final Project Game</title>
+    <style>
+        body {  
+            text-align: center;
+        }
+        .topHeader {
+            font-family: 'Turret Road', cursive;
+            width: 100%;
+            margin: -3% auto;
+            color: white;
+            font-family: 'Mansalva', cursive;
+            font-size: 3rem;
+            animation-name: sally;
+            animation-duration: 7s;
+            animation-iteration-count: infinite;
+        }
+        /* Standard syntax */
+        @keyframes sally {
+            0% {background-color: red;}
+            25% {background-color: gold;}
+            50% {background-color: green;}
+            75% {background-color: blue;}
+            100% {background-color: purple;}
+        }
+        /* Safari, Opera */
+        @-webkit-keyframes sally {
+            0% {background-color: red;}
+            25% {background-color: gold;}
+            50% {background-color: green;}
+            75% {background-color: blue;}
+            100% {background-color: purple;}
+        }
+        h1 {
+            line-height: 3em;          
+        }
+        h2 {
+            transition: 1.5s;
+        }
+        .topBody {
+            font-family: 'Turret Road', cursive;
+        }
+        input {
+            font-size: 1.3rem;
+            text-align: center;
+            margin-top: 1.5%;
+        }
+        button {
+            background-color: red;
+            padding: 20px 30px;
+            margin-bottom: 20%;
+            font-size: 2em;
+            text-align: center;
+            cursor: pointer;
+            color: white;
+            margin-left: 80%;
+            display: none;
+        }
+        button a {
+            font-size: 1.2rem;
+        }
+        #character {
+            position: absolute;
+            top: 50%;
+            left: -20%;
+            rotate: -30deg;
+            transition: 1s ease-in;
+            animation-fill-mode: forwards;
+        }
+        #character img {
+            width: 400px;
+        }
+        .nameCallout {
+            position: relative;
+        }
+        #callout {
+            display: none;
+        }
+        #callout img {
+            width: 300px;
+            transition: 1.5s;
+        }
+        #output {
+            position: absolute;
+            top: 20%;
+            left: 43%;
+        }
+        
+    
+    </style>
+</head>
+<body>
+    <div class="topHeader">
+        <h1>Welcome to our playground!</h1>    
+    </div>
+    <div class="topBody">
+        <input type="text" placeholder="Input your name" id="name" onkeypress="enter();">
+        <br>
+        
+        <div class="nameCallout">
+            <h2 id="output"></h2>
+            <div id="callout">
+            <img src="img/callout.png">
+            </div>
+            <button id="startbutton">Click to start</button> 
+        </div>
+        
+        <div id="character">
+            <img src="img/character1.png">
+        </div>
+        
+    </div>
+    <script>
+        function myMove() {
+                var elem = document.getElementById("character");   
+                var pos = 0;
+                var id = setInterval(frame, 0.1);
+                function frame() {
+                    if (pos == 100) {
+                    clearInterval(id);
+                    } else {
+                    pos++; 
+                    elem.style.left = pos + 'px'; 
+                    }
+                }
+            }
+
+        function enter(){
+            var name = document.getElementById("name").value;
+            document.getElementById("output").innerHTML = "Hello, " + name + " !";
+            myMove();
+            document.getElementById("callout").style.display = "block";
+            document.getElementById("name").style.display = "none";
+            document.getElementById("startbutton").style.display = "block";
+        };
+    </script>
+</body>
+</html>

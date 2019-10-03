@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Mansalva|Turret+Road&display=swap" rel="stylesheet">
+    <title>Calculator</title>
+    <style>
+    html{
+        margin: 0 auto;
+        background-image: radial-gradient(rgb(16, 16, 109), rgb(97, 20, 97))
+    }
+    div.header{
+        font-size: 25px;
+        margin: -8px;
+        height: 95px;
+        font-family: 'Mansalva', cursive;
+        color: white;
+        text-align: center;
+        background-color: #E17520;
+    }
+    div.game{
+        float: left;
+        border-radius: 12px;
+        margin-top: 200px;
+        margin-left: 300px;
+        height: 200px;
+        width: 250px;
+        align-content: center;
+        background-color: #2797AD;
+        text-align: center;
+    }
+    div.result{
+        font-size: 24px;
+        text-align: center;
+        font-family: 'Mansalva', cursive;
+        float: right;
+        margin-top: 200px;
+        margin-right: 200px;
+        height: 450px;
+        width: 450px;
+        background-repeat: no-repeat;
+        background-size: 450px;
+        background-image: url(images/result.png);
+        color: white;
+    }
+    button{
+        font-family: 'Mansalva', cursive;
+        margin-top: 10px;
+        color: rgb(61, 184, 24);
+        font-size: 24px;
+        background-color: rgb(11, 101, 119);
+        border: none;
+        border-radius: 12px;
+    }
+    button:hover{
+        transition-duration: .5s;
+        background-color: rgb(61, 184, 24);
+        color: rgb(11, 101, 119);
+    }
+    input.n1{
+        border:none;
+        font-family: 'Mansalva', cursive;
+        text-align: center;
+        margin-top: 25px;
+        font-size: 15px;
+        border-radius: 12px;
+    }
+    input.n2{
+        border:none;
+        font-family: 'Mansalva', cursive;
+        text-align: center;
+        margin-top: 10px;
+        font-size: 15px;
+        border-radius: 12px;
+    }
+    input.a{
+        border:none;
+        font-family: 'Mansalva', cursive;
+        text-align: center;
+        margin-top: 10px;
+        font-size: 15px;
+        border-radius: 12px;
+    }
+    select{
+        border: none;
+        border-radius: 12px;
+    }
+    p{
+        margin-top: 100px;
+    }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Calculator!</h1>
+    </div>
+<div class="wrapper">
+    <div class="game">
+        <input type="text" id="num1" placeholder="First Number" class="n1">
+        <input type="text" id="num2" placeholder="Second Number" class="n2">
+        <select id="sym">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="/">/</option>
+            <option value="*">*</option>
+        </select>
+        <input type="text" id="res" placeholder="Answer" class="a">
+        <button onClick="checkResult(insertSymbol)" >Check Answer</button>
+    </div>
+    <div class="result">
+            <p id="result">Result</p>
+    </div>
+</div>
+</body>
+</html>

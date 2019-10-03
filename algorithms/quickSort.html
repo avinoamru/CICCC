@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quick sort</title>
+    <style>
+   body{
+       background-color: white;
+   }
+    #title{
+        font-size: 3em;
+    }
+    #output{
+        color: black;
+        font-size: 2em;
+        text-align: left;
+        margin: 0px 50px;
+    }
+    #sortButton{
+        margin: 10px 50px;
+        padding: 10px 100px;
+        color: white;
+        font-size: 24px;
+        background-color: rgb(105, 105, 105);
+    }
+    #text{
+        font-size: 24px;
+        font-style: oblique;
+        
+    }
+    </style>
+
+</head>
+<body>
+<h1 id="title">Quicksort assignment</h1>
+<p id="text">We have an unsorted array: Array = [6, 2, 5, 3, 8, 7, 1, 4, -1, 22, 14,-4] , and we need to sort it using quicksort algorithm.<br>
+    Click on the button to sort the array:</p>
+<button type="button" id="sortButton" onClick="result()">Sort the array</button>
+<h2 id="output"></h2>
+
+
+
+<script>
+var myArray = [6, 2, 5, 3, 8, 7, 1, 4, -1, 22, 14,-4];
+
+function quicksort(array) {
+  if (array.length <= 1) {
+    return array;
+  }
+
+  var pivot = array[0];
+  
+  var left = []; 
+  var right = [];
+
+  for (var i = 1; i < array.length; ++i) {
+    array[i] < pivot ? left.push(array[i]) : right.push(array[i]);
+  }
+
+  return quicksort(left).concat(pivot, quicksort(right));
+};
+
+
+var sortedArray = quicksort(myArray);
+function result(){
+    document.getElementById("output").innerHTML = "The sorted array is: " + sortedArray;
+}
+
+
+
+
+
+</script>
+</body>
+</html>

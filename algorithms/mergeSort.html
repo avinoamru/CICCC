@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Merge sort</title>
+</head>
+<body>
+    
+<script>
+
+     var myArray = [3,1,9,18,5,22,10,8,56,-4,7,12,1];
+    var len = myArray.length - 1;
+    var mid = len / 2;
+    console.log(len);
+     /*======================================
+                Split the array
+    ======================================*/
+    function divide(array){
+      var i;
+       while (i = len || i <= 1 || i++){
+
+        var left = array.slice(0,mid);
+        var right = array.slice(mid);
+        console.log("this is right "+right+ " and this is left "+ left);
+     
+        }
+    }
+
+    /*======================================
+    Merging the arrays
+    ======================================*/
+    /* function merge(array){
+        for (var j = 0; j <= 1; j++){
+            divide(array).concat();
+        }
+    }
+    
+          */
+    divide(myArray);
+    console.log(divide(myArray));
+    
+</script>
+</body>
+</html>

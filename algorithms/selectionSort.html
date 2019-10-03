@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<h1 id="output"></h1>
+
+
+    <script>
+        var inputArray = [1, 9, 4, 5, 16, 7, 33];
+        
+        function selectionSort(array){
+          var len = inputArray.length;
+          var smallest;
+            for (var i = 0; i < len - 1; i++){
+                smallest = i;
+
+               for (n = i+1; n < len; n++){
+                   if (array[n] < array[smallest]){
+                       smallest = n;
+                   }
+
+               }
+            }
+            if (i != smallest){
+                swap(array, i, smallest);
+            }
+           
+        }
+        function swap(array, firstIndex, secondIndex){
+            var temp = array[firstIndex];
+              array[firstIndex] = array[secondIndex];
+              array[secondIndex] = temp;
+}
+
+    </script>
+</body>
+</html>

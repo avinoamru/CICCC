@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bubble Sort</title>
+</head>
+<body>
+    
+<script>
+    var myArray = [2,5,3,13,7,21,10,8];
+
+    function bubbleSort(inputArray){
+            
+        for (var i = 0; i < (inputArray.length-1); i++){
+           console.log("how many times its looping:  "+ i);
+           compareElements(inputArray, i);
+           console.log("local output: "+inputArray);
+        }
+    }
+    
+    function compareElements(inputArray, index){
+        for(var j = index; j < (inputArray.length-1); j++){
+           console.log("how many times its looping inside:  "+ j);
+            if (parseInt(inputArray[j]) > parseInt(inputArray[j+1])){
+                console.log("Swapping: "+ j +" and "+ (j+1));
+                swapElementAviMode(inputArray,j,j+1);
+            }
+
+        }
+
+    }
+    
+    
+    
+    function swapElementAviMode(input, lowestP,targetP){
+         var temp = input[lowestP];
+         input[lowestP] = input[targetP];
+         input[targetP] = temp;
+        // console.log("this showes the temp(swap): "+ temp);
+     }
+
+        bubbleSort(myArray);
+        console.log(myArray);
+</script>
+</body>
+</html>
